@@ -1,75 +1,31 @@
 <template>
 
-  <nav class="navbar bg-transparent sticky-top container">
+  
+  <NavComponets/>
 
-    <div id="right-navbar" style="display: flex; justify-content: start">
-    <div>
-       chart
-    </div>
-     
-    </div>
-
-    <div id="center-navbar" style="display: flex; justify-content: center; ">
-      <router-link to="/" id="Logo">Divinitas</router-link>
-    </div>
-
-    
-    <div id="left-navbar" style="display: flex; justify-content: end">
-    <div style="display: flex; justify-content: space-evenly">
-
-      <div>
-        <input id="searchbar" type="text" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
-      </div>
-
-      <div >
-        login
-      </div>
-    </div>
-
-      
-      
-    </div>
-    
-  </nav>
-
-  <div style="height: 50vh">
-    <landing-view/>
-  </div>
+  <!-- <div style="height: 50vh">
+    <HomeView/>
+  </div> -->
  
-  <div style="height: 200vh">
+  <!-- <div style="height: 200vh">
     
-  </div>
+  </div> -->
+  <router-view/>
 
   
 
 </template>
 
 <script>
-import LandingView from './views/LandingView.vue'
+import NavComponets from './components/NavComponets.vue'
+
+import HomeView from './views/HomeView.vue'
+
 export default {
-  components: {LandingView}
+  components: {NavComponets, HomeView}
 }
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
-
-nav a {
-  
-}
-
-#Logo {
-  text-decoration: none;
-  color: black;
-  font-family: 'Roboto', sans-serif;
-  font-size: 3rem;
-}
-
-#searchbar{
-  width: 100px;
-  border: none;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
 
 </style>
