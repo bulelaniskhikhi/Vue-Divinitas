@@ -4,14 +4,14 @@
   flex-wrap: wrap; justify-content: space-evenly; margin-top: 5rem;">
 
     <div id="Login">
-       <div id="LoginForm">
+       <form id="LoginForm">
           <div id="LoginFormTitle">
               <h3>LOGIN</h3>
           </div>
           <div>
               <label for="" class="fw-light">EMAIL</label>
               <br>
-              <input type="text">
+              <input type="text" required>
           </div>
 
           <br>
@@ -19,23 +19,23 @@
           <div>
               <label for="" class="fw-light">PASSWORD</label>
               <br>
-              <input type="text">
+              <input type="text" required>
           </div>
           <div>
-              <button>LOGIN</button>
+              <button type="submit">LOGIN</button>
           </div>
-       </div>
+       </form>
     </div>
 
     <div id="Register" >
-        <div id="RegisterForm">
+        <form id="RegisterForm">
             <div id="RegisterFormTitle">
                 <h3>REGISTER</h3>
             </div>
             <div>
               <label for="" class="fw-light">EMAIL</label>
               <br>
-              <input type="text">
+              <input type="text" required>
           </div>
 
           <br>
@@ -43,12 +43,12 @@
           <div>
               <label for="" class="fw-light">PASSWORD</label>
               <br>
-              <input type="text">
+              <input type="text" required>
           </div>
           <div>
-              <button>CREATE</button>
+              <button type="submit">CREATE</button>
           </div>
-        </div>
+        </form>
     </div>
 
 </div>
@@ -90,5 +90,14 @@ button {
     width: 40%;
     color: white;
     margin-top: 2rem;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+label{
+    margin-bottom: 5px;
 }
 </style>

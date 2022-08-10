@@ -5,13 +5,13 @@
 
     <div id="right-navbar" style="display: flex; justify-content: start">
 
-    <div>
+    <div id="Chart" style="padding-right: 118.55px">
        Chart
     </div>
      
     </div>
 
-    <div id="center-navbar" class="d-flex justify-content-center">
+    <div id="center-navbar" style="padding-left: 20px" >
       <router-link to="/" id="Logo">Divinitas</router-link>
     </div>
 
@@ -58,10 +58,13 @@
 }
 
 #center-navbar{
-    display: flex !important;
-    justify-content: center !important;
+    
 }
 #right-navbar{
     vertical-align: middle;
+}
+
+#Chart , #loginlink {
+    font-family: 'Oswald', sans-serif;
 }
 </style>
