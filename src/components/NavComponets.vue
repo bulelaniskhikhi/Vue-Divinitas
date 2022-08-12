@@ -1,12 +1,12 @@
 <template>
     
-
-    <nav class="navbar bg-transparent sticky-top container" >
+  <div id="navfilter" class="container-fluid sticky-top" style="width: 100%">
+    <nav class="navbar bg-transparent  container" >
 
     <div id="right-navbar" style="display: flex; justify-content: start">
 
     <div id="Chart" style="padding-right: 118.55px">
-       Chart
+       Cart
     </div>
      
     </div>
@@ -31,6 +31,8 @@
       
     </div>
   </nav>
+  </div>
+    
 </template>
 
 <style scoped>
@@ -50,6 +52,7 @@
   border-width: 0 0 1px;
   border-color: black;
   margin-right: 20px;
+  background: transparent;
 }
 
 #loginlink{
@@ -66,5 +69,15 @@
 
 #Chart , #loginlink {
     font-family: 'Oswald', sans-serif;
+}
+
+#navfilter{
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0);
+border-radius: 16px;
+/* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+backdrop-filter: blur(9.5px);
+-webkit-backdrop-filter: blur(9.5px);
+
 }
 </style>
