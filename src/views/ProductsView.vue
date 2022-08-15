@@ -1,11 +1,12 @@
 <template>
   <div class="container" style="margin-top: 5rem">
       <div class="row" >
-          <div class="col-sm-3" v-for="product in products" :key="product">
+          <div class="col-md-3" v-for="product in products" :key="product">
 
       <div style="display: flex; justify-content: center" >
 
-        <div class="card" style="width: 20rem; margin-bottom: 3rem; border: none;" >
+        <router-link id="prodLink" :to="{name : 'product' , params:{ id : product.id}}">
+          <div class="card" style="width: 20rem; margin-bottom: 3rem; border: none;" >
           <img id="prodImg" :src="product.prodImg_URL" class="card-img-top" alt="..." />
           <div class="card-body">
             <p class="card-text" id="prodName">
@@ -19,6 +20,7 @@
             </p>
           </div>
         </div>
+        </router-link>
 
       </div>
     </div>
@@ -45,6 +47,7 @@ export default {
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.1rem;
     margin-bottom: 0;
+    color: black;
 }
 
 #prodImg{
@@ -53,6 +56,10 @@ export default {
 
 #prodImg:hover {
   scale: 1.2;
+}
+
+#prodLink{
+  text-decoration: none;
 }
 </style>
 

@@ -1,9 +1,12 @@
 <template>
 
-<div class="container" style="display: flex;
-  flex-wrap: wrap; justify-content: space-evenly; margin-top: 5rem;">
 
-    <div id="Login">
+   <div class="container" style="margin-top: 5rem; ">
+
+<div id="box" style="display: inline-flex;
+  flex-wrap: wrap;width: 100% ">
+
+    <div id="Login" >
        <form id="LoginForm">
           <div id="LoginFormTitle">
               <h3>LOGIN</h3>
@@ -21,17 +24,28 @@
               <br>
               <input type="text" required>
           </div>
+
           <div>
-              <button type="submit">LOGIN</button>
+              <button type="submit" style="width: 100%">LOGIN</button>
           </div>
        </form>
     </div>
+   
 
-    <div id="Register" >
+      <div id="Register">
         <form id="RegisterForm">
             <div id="RegisterFormTitle">
                 <h3>REGISTER</h3>
             </div>
+
+            <div>
+              <label for="" class="fw-light">USERNAME</label>
+              <br>
+              <input type="text" required>
+          </div>
+
+          <br>
+
             <div>
               <label for="" class="fw-light">EMAIL</label>
               <br>
@@ -46,12 +60,16 @@
               <input type="text" required>
           </div>
           <div>
-              <button type="submit">CREATE</button>
+              <button type="submit" style="width: 100%">CREATE</button>
           </div>
         </form>
     </div>
 
 </div>
+
+ 
+</div>
+
     
 </template>
 
@@ -100,4 +118,9 @@ input:focus {
 label{
     margin-bottom: 5px;
 }
+
+#box>* {
+        flex: 1 1 180px;
+        margin: 40px;
+    }
 </style>

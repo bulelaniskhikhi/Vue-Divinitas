@@ -2,30 +2,23 @@
 
   
   <NavComponets/>
-
-  <!-- <div style="height: 50vh">
-    <HomeView/>
-  </div> -->
- 
-  <!-- <div style="height: 200vh">
-    
-  </div> -->
+  
   <router-view/>
 
-  
+  <FooterComponent/>
 
 </template>
 
 <script>
 import NavComponets from './components/NavComponets.vue'
+import FooterComponent from './components/FooterComponent.vue'
 
 import HomeView from './views/HomeView.vue'
 
 export default {
-  components: {NavComponets, HomeView}
+  components: {NavComponets, HomeView, FooterComponent}
 }
 </script>
 
 <style scoped>
-
 </style>

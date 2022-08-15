@@ -1,12 +1,12 @@
 <template>
 
-    <div id="LandindVid" style="height: 77vh; margin-bottom: 5rem; ">
+    <div id="LandindVid" style="height: 77vh; margin-bottom: 5rem; overflow: hidden; ">
         <video width="580" height="580" autoplay muted loop>
             <source src="../assets/divintas/Videos/240883353_1284305858688501_159176465472167767_n.mp4" type="video/mp4">
         </video>
     </div>
 
-    <div class="container" style="height: 50vh; display: flex; justify-content: center">
+    <div class="container" style="height: 50vh; display: flex; justify-content: center; margin-bottom: 3rem">
     <div id="About" style="width: 60rem; ">
         <div id="AboutTitle" >
             <h1>ABOUT</h1>
@@ -16,13 +16,14 @@
         
     </div>
 
-    <div class="container" style="margin-top: 5rem">
+    <div class="container" style="margin-top: 9rem">
       <div class="row" >
           <div class="col-sm-3" v-for="(product, index) in products" :key="product">
 
       <div style="display: flex; justify-content: center" v-if="index < 5">
 
         <div class="card" style="width: 20rem; margin-bottom: 3rem; border: none;" >
+        <router-link id="prodLink" :to="{name : 'product' , params:{ id : product.id}}">
           <img id="prodImg" :src="product.prodImg_URL" class="card-img-top" alt="..." />
           <div class="card-body">
             <p class="card-text" id="prodName">
@@ -35,6 +36,7 @@
               R {{product.prodPrice}}
             </p>
           </div>
+          </router-link>
         </div>
 
       </div>
@@ -86,6 +88,11 @@ export default {
 }
 
 #prodImg:hover {
-  scale: 1.2;
+  scale: 1.05;
+}
+
+#prodLink{
+  text-decoration: none;
+  color: black;
 }
 </style>
