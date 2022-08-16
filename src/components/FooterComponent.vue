@@ -7,6 +7,8 @@
 
       <li class="nav-item"><router-link to="/products" class="nav-link px-2 text-muted">Products</router-link></li>
 
+      <li class="nav-item"><router-link to="/admin" class="nav-link px-2 text-muted">Admin</router-link></li>
+
     </ul>
     <p class="text-center text-muted">© 2022 Divinitas ⚧, Inc</p>
   </footer>
