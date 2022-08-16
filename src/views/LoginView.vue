@@ -7,14 +7,14 @@
   flex-wrap: wrap;width: 100% ">
 
     <div id="Login" >
-       <form id="LoginForm">
+       <form id="LoginForm" @submit.prevent="login">
           <div id="LoginFormTitle">
               <h3>LOGIN</h3>
           </div>
           <div>
               <label for="" class="fw-light">EMAIL</label>
               <br>
-              <input type="text" required>
+              <input v-model="userEmail" type="text" required>
           </div>
 
           <br>
@@ -22,7 +22,7 @@
           <div>
               <label for="" class="fw-light">PASSWORD</label>
               <br>
-              <input type="text" required>
+              <input v-model="userpassword" type="text" required>
           </div>
 
           <div>
@@ -72,7 +72,25 @@
 
     
 </template>
-
+<script>
+export default{
+    data(){
+        return{
+            userEmail: null,
+            userpassword: null,
+        }
+    },
+    methods:{
+        login(){
+            return this.$store.dispatch('login',
+            {
+              email: this.email,
+              userpassword: this.userpassword
+            })
+        }
+    }
+}
+</script>
 <style scoped>
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto:wght@100&display=swap'); */
 
@@ -108,6 +126,7 @@ button {
     width: 40%;
     color: white;
     margin-top: 2rem;
+    border: none;
 }
 
 input:focus {

@@ -18,9 +18,9 @@
     
     <div id="left-navbar" style="display: flex; justify-content: end">
     <div style="display: flex; justify-content: space-evenly">
-      <div>
+      <!-- <div>
         <router-link to='/cart' id="cartlink">Cart</router-link>
-      </div>
+      </div> -->
       <div >
         <router-link to='/Login' id="loginlink">Login</router-link>
       </div>

@@ -1,5 +1,8 @@
 <template>
     <div class="container">
+
+
+
         <table class="table">
   <thead>
     <tr>
@@ -10,21 +13,22 @@
       <th scope="col">Type</th>
       <th scope="col">Price</th>
       <th scope="col">Serial code</th>
-      <th scope="col">Brand name</th>
+      <th scope="col">Brand</th>
       <th scope="col"></th>
       <th scope="col"></th>
     </tr>
   </thead>
   <tbody v-if="products">
     <tr v-for="product in products" :key="product" :product="product">
-      <th scope="row">{{product.id}}</th>
-      <td>{{product.prodName}}</td>
+
+      <th style="font-family: 'Share Tech Mono', monospace; font-size: 1.1rem;" scope="row">{{product.id}}</th>
+      <td style="font-family: 'Montserrat', sans-serif;"><strong>{{product.prodName}}</strong></td>
       <td><img :src="product.prodImg_URL" style="width: 5rem"></td>
-      <td>{{product.prodDesc}}</td>
-      <td>{{product.prodType}}</td>
-      <td>{{product.prodPrice}}</td>
-      <td>{{product.prodSerial_Code}}</td>
-      <td>{{product.brandName}}</td>
+      <td class="fw-light">{{product.prodDesc}}</td>
+      <td style="font-family: 'Montserrat', sans-serif;"><strong>{{product.prodType}}</strong></td>
+      <td style="font-family: 'Share Tech Mono', monospace; font-size: 1.1rem;">{{product.prodPrice}}</td>
+      <td style="font-family: 'Share Tech Mono', monospace; font-size: 1.1rem;">{{product.prodSerial_Code}}</td>
+      <td style="font-family: 'Montserrat', sans-serif;"><strong>{{product.brandName}}</strong></td>
       <td>
           <button type="submit" style="width: 100%">
             EDIT
@@ -62,5 +66,6 @@ button {
     width: 40%;
     color: white;
     margin-top: 2rem;
+    border: none;
 }
 </style>

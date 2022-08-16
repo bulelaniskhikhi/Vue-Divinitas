@@ -1,5 +1,5 @@
 import { createStore } from 'vuex'
-
+const nodeEOMP = "https://marge-api.herokuapp.com/";
 export default createStore({
   state: {
     allprod: null,
@@ -18,6 +18,25 @@ export default createStore({
     }
   },
   actions: {
+    login: async (context, payload) =>  {
+      try{
+        const {userEmail, userpassword} = payload;
+        const data = {
+          userEmail,
+          userpassword
+        };
+        fetch(nodeEOMP+"users", {
+          method: "patch",
+          body : JSON.stringify(data), 
+          headers: {
+            "Content-type": "application/json; charset=UTF-8"
+          }
+        }).then((res) => res.json())
+        .then((data) => console.log(data))
+      }catch(e){
+
+      }
+    },
     async getprod(context) {
       const response = await fetch("https://marge-api.herokuapp.com/products");
       const data = await response.json();

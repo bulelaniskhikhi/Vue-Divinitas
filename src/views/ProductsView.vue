@@ -1,5 +1,8 @@
 <template>
   <div class="container" style="margin-top: 5rem">
+
+      <Filter/>
+
       <div class="row" >
           <div style="height: 100vh" class="col-md-3" v-for="product in products" :key="product">
 
@@ -30,7 +33,10 @@
 </template>
 
 <script>
+import Filter from '../components/FilterComponent.vue'
+
 export default {
+  components: {Filter},
   mounted() {
     this.$store.dispatch("getprod");
   },

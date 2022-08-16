@@ -14,7 +14,7 @@
                
 
                <div id="prodDesc" style="margin-top: 2rem">
-                   <p>{{product.prodDesc}}</p>
+                   <p class="fw-light">{{product.prodDesc}}</p>
                </div>
 
                 <div id="prodPrice" style="margin-top: 2rem">
@@ -22,7 +22,8 @@
                 </div>
             
             <button>
-                CART
+                <router-link to='/cart' id="cartlink">CART</router-link>
+                
             </button>
            </div>
             
@@ -50,6 +51,14 @@ export default {
 </script>
 
 <style scoped>
+button {
+    background: #000;
+    width: 40%;
+    color: white;
+    margin-top: 2rem;
+    border: none;
+}
+
 #prodPrice{
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.5rem;
@@ -57,5 +66,10 @@ export default {
 
 #prodName{
      font-family: 'Montserrat', sans-serif;
+}
+
+#cartlink{
+    text-decoration: none;
+    color: white;
 }
 </style>
