@@ -1,7 +1,7 @@
 <template>
   <div class="container" style="margin-top: 5rem">
       <div class="row" >
-          <div class="col-md-3" v-for="product in products" :key="product">
+          <div style="height: 100vh" class="col-md-3" v-for="product in products" :key="product">
 
       <div style="display: flex; justify-content: center" >
 
@@ -55,7 +55,7 @@ export default {
 }
 
 #prodImg:hover {
-  scale: 1.2;
+  scale: 1.05;
 }
 
 #prodLink{

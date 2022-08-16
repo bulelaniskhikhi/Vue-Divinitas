@@ -28,6 +28,20 @@ const routes = [
         return import('../views/SingleProductView.vue')
       },
       props: true
+    },
+    {
+      path: '/admin',
+      name: 'admin',
+      component: function () {
+        return import('../views/AdminView.vue')
+      } 
+    },
+    {
+      path: '/cart',
+      name: 'cart',
+      component: function () {
+        return import('../views/CartView.vue')
+      } 
     }
 ]
 

@@ -7,10 +7,8 @@
 
       <li class="nav-item"><router-link to="/products" class="nav-link px-2 text-muted">Products</router-link></li>
 
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
     </ul>
-    <p class="text-center text-muted">© 2022 Company, Inc</p>
+    <p class="text-center text-muted">© 2022 Divinitas, Inc</p>
   </footer>
 
 </template>

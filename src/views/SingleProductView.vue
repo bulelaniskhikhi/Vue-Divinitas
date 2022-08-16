@@ -21,6 +21,9 @@
                     <p id='prodPrice'>R {{product.prodPrice}}</p>
                 </div>
             
+            <button>
+                CART
+            </button>
            </div>
             
             <div style=" display: flex; justify-content: center;">

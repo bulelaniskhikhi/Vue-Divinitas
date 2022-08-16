@@ -5,8 +5,8 @@
 
     <div id="right-navbar" style="display: flex; justify-content: start">
 
-    <div id="Chart" style="">
-       Cart
+    <div >
+       <router-link to='/products' id="prodlink">Product</router-link>
     </div>
      
     </div>
@@ -18,11 +18,9 @@
     
     <div id="left-navbar" style="display: flex; justify-content: end">
     <div style="display: flex; justify-content: space-evenly">
-
-      <!-- <div>
-        <input id="searchbar" type="text" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
-      </div> -->
-
+      <div>
+        <router-link to='/cart' id="cartlink">Cart</router-link>
+      </div>
       <div >
         <router-link to='/Login' id="loginlink">Login</router-link>
       </div>
@@ -37,7 +35,9 @@
 
 <style scoped>
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap'); */
-
+#cartlink{
+  padding: 2rem;
+}
 
 #Logo {
   text-decoration: none;
@@ -55,7 +55,7 @@
   background: transparent;
 }
 
-#loginlink{
+#loginlink, #cartlink, #prodlink{
     color: black;
     text-decoration: none;
 }
@@ -67,7 +67,7 @@
     vertical-align: middle;
 }
 
-#Chart , #loginlink {
+#Chart , #loginlink, #cartlink, #prodlink{
     font-family: 'Oswald', sans-serif;
 }
 
