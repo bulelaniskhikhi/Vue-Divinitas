@@ -2,8 +2,8 @@
     <div class="container">
 
 
-
-        <table class="table">
+<div class="table-responsive">
+   <table class="table " style="margin-top: 5rem">
   <thead>
     <tr>
       <th scope="col">Id</th>
@@ -43,6 +43,8 @@
 
   </tbody>
 </table>
+</div>
+       
     </div>
 
 </template>

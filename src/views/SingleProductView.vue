@@ -20,11 +20,13 @@
                 <div id="prodPrice" style="margin-top: 2rem">
                     <p id='prodPrice'>R {{product.prodPrice}}</p>
                 </div>
-            
-            <button>
+            <div style="display: flex; justify-content: center">
+                <button>
                 <router-link to='/cart' id="cartlink">CART</router-link>
                 
             </button>
+            </div>
+            
            </div>
             
             <div style=" display: flex; justify-content: center;">

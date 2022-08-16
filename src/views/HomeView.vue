@@ -6,7 +6,7 @@
         </video>
     </div>
 
-    <div class="container" style="height: 50vh; display: flex; justify-content: center; margin-bottom: 3rem">
+    <div class="container" style="display: flex; justify-content: center; margin-bottom: 3rem">
     <div id="About" style="width: 60rem; ">
         <div id="AboutTitle" >
             <h1>ABOUT</h1>
@@ -15,9 +15,10 @@
     </div>
         
     </div>
-
     <div class="container" style="margin-top: 9rem">
+ <div class="container" >
       <div class="row" >
+
           <div class="col-sm-3" v-for="(product, index) in products" :key="product">
 
       <div style="display: flex; justify-content: center" v-if="index < 5">
@@ -44,6 +45,9 @@
       </div>
     
   </div>
+    </div>
+
+   
 </template>
 
 <script>
